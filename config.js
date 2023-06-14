@@ -1,11 +1,12 @@
 const config = {
   db: {
-    host: "localhost",
-    database: "ecom_api_db",
-    user: "root",
-    password: "root",
+    host: process.env.MYSQLHOST || "localhost",
+    database: process.env.MYSQLDATABASE  || "ecom_api_db",
+    user:  process.env.MYSQLUSER || "root",
+    password:  process.env.MYSQLPASSWORD || "root",
+    port:process.env.MYSQLPORT || 3306
   },
-  port:30004
+  port: process.env.PORT || 30004
 };
 
 
